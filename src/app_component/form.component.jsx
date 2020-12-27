@@ -6,8 +6,10 @@ const Form = props => {
     <div className="container h-100">
       <form onSubmit={props.loadweather}>
         <div>{props.error ? error() : ""}</div>
-        <div className="d-flex justify-content-centering">
-          <div className="col-3 offset-md-3 ">
+        <div className="d-flex justify-content-center row">
+        <div className="row">
+            <div className="col">
+          <div>
             <input
               type="text"
               className="form-control"
@@ -16,7 +18,9 @@ const Form = props => {
               autoComplete="off"
             />
           </div>
-          <div className="col-3">
+          
+          </div>
+          <div className="col">
             <input
               type="text"
               className="form-control"
@@ -24,9 +28,10 @@ const Form = props => {
               name="country"
               autoComplete="off"
             />
+          </div>
           </div>     
         </div>
-        <div className="d-flex justify-content-center row mt-3">
+        <div className="d-flex justify-content-center row mt-4">
             <button className="btn btn-rounded btn-outline-white waves-effect waves-light">Get Weather</button>
           </div>
       </form>
