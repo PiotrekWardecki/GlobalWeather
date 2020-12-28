@@ -32,7 +32,7 @@ const Form = props => {
           </div>     
         </div>
         <div className="d-flex justify-content-center row mt-4">
-            <button className="btn btn-rounded btn-outline-white waves-effect waves-light">Get Weather</button>
+            <button className="btn btn-outline-white waves-effect waves-light">Get Weather</button>
           </div>
       </form>
     </div>

@@ -14,9 +14,8 @@ const Weather = props => {
         {props.temp_celsius ? (
           <h1 className="py-2">{props.temp_celsius}&deg;</h1>
         ) : null}
-
         
-        {maxminTemp(props.temp_min, props.temp_max)}
+        {maxminTemp(props.feels_like,props.temp_min, props.temp_max)}
 
         
         <h4 className="py-3">
@@ -30,11 +29,15 @@ const Weather = props => {
 
 export default Weather;
 
-function maxminTemp(min, max) {
+function maxminTemp(feels_like,min, max) {
   if (max && min) {
     return (
       <h3>
+        <span className="smallText">min</span>
         <span className="px-4">{min}&deg;</span>
+        <span className="smallText">odczuwalna</span>
+        <span className="px-4">{feels_like}&deg;</span>
+        <span className="smallText">max</span>
         <span className="px-4">{max}&deg;</span>
       </h3>
     );

@@ -12,3 +12,7 @@
   border: none;
   border-bottom: 2px solid tomato;
 }
+
+.smallText{
+  font-size:large;
+}

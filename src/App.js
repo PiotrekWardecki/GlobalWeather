@@ -19,6 +19,7 @@ class App extends React.Component {
       icon: undefined,
       main: undefined,
       celsius: undefined,
+      feels_like: null,
       temp_max: null,
       temp_min: null,
       description: "",
@@ -65,7 +66,7 @@ class App extends React.Component {
   }
 
   calCelsius(temp) {
-    let cell = Math.floor(temp - 273.15);
+    let cell = Math.round(temp - 273.15);
     return cell;
   }
 
@@ -87,6 +88,7 @@ class App extends React.Component {
         country: response.sys.country,
         main: response.weather[0].main,
         celsius: this.calCelsius(response.main.temp),
+        feels_like: this.calCelsius(response.main.feels_like),
         temp_max: this.calCelsius(response.main.temp_max),
         temp_min: this.calCelsius(response.main.temp_min),
         description: response.weather[0].description,
@@ -111,6 +113,7 @@ class App extends React.Component {
           cityname={this.state.city}
           weatherIcon={this.state.icon}
           temp_celsius={this.state.celsius}
+          feels_like={this.state.feels_like}
           temp_max={this.state.temp_max}
           temp_min={this.state.temp_min}
           description={this.state.description}
