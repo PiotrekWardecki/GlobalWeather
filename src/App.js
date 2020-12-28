@@ -7,7 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css"; 
 import "mdbreact/dist/css/mdb.css";
 import "weather-icons/css/weather-icons.css";
-
+import cloudicon from "./assets/cloudicon.png"
 const Api_Key = "429736441cf3572838aa10530929f7cd";
 
 class App extends React.Component {
@@ -108,6 +108,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <img src={cloudicon} className="backlogo" alt={cloudicon} />
         <Form loadweather={this.getWeather} error={this.state.error} />
         <Weather
           cityname={this.state.city}

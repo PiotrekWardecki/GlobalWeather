@@ -7,7 +7,13 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.backlogo{
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  z-index:1;
+  animation: updown  40s ease infinite;
+}
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -29,4 +35,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+  
 }
